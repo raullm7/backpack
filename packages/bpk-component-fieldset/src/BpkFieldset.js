@@ -76,7 +76,8 @@ const BpkFieldset = (props) => {
           htmlFor={children.props.id}
           required={required}
           disabled={disabled}
-        >{label}</BpkLabel>
+        >{label}
+        </BpkLabel>
       )}
       {clonedChildren}
       {validationMessage && (

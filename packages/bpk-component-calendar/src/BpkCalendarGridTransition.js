@@ -118,7 +118,7 @@ class BpkCalendarGridTransition extends Component {
   }
 
   onMonthTransitionEnd() {
-    const month = this.props.month;
+    const { month } = this.props;
 
     this.setState({
       transitionValue: transitionValues.current,

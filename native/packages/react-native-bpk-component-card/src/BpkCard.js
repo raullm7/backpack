@@ -68,7 +68,9 @@ const styles = StyleSheet.create({
 });
 
 const BpkCard = (props) => {
-  const { padded, children, onPress, style, ...rest } = props;
+  const {
+    padded, children, onPress, style, ...rest
+  } = props;
 
   const cardBaseStyle = [styles.card, styles.common];
 
@@ -101,7 +103,6 @@ BpkCard.propTypes = {
 };
 
 BpkCard.defaultProps = {
-  children: null,
   padded: true,
   style: null,
 };

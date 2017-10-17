@@ -97,7 +97,9 @@ class BpkBannerAlert extends Component {
   }
 
   render() {
-    const { children, className, type, ariaLive, message, toggleButtonLabel, ...rest } = this.props;
+    const {
+      children, className, type, ariaLive, message, toggleButtonLabel, ...rest
+    } = this.props;
     const isExpanded = this.state.expanded;
     const isExpandable = children;
     const showChildren = isExpandable && isExpanded;

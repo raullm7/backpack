@@ -89,10 +89,10 @@ describe('BpkImage', () => {
         width={816}
         height={544}
         src="./path/to/image_1640.jpg"
-        srcSet={`./path/to/image_320px.jpg 320w,
+        srcSet="./path/to/image_320px.jpg 320w,
           ./path/to/image_640px.jpg 640w,
           ./path/to/image_1640px.jpg 1640w,
-          ./path/to/image_3200px.jpg 3200w`}
+          ./path/to/image_3200px.jpg 3200w"
         sizes={`(min-width: ${BREAKPOINTS.breakpointDesktop}) 48rem,
           (min-width: ${BREAKPOINTS.breakpointTablet}) calc(100vw - 18rem),
           calc(100vw - 4.5rem)`}

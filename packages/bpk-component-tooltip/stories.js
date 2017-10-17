@@ -41,7 +41,8 @@ storiesOf('bpk-component-tooltip', module)
         id="my-tooltip"
         target={<Heading>£295</Heading>}
       >
-        This is the cheapest price! 👍
+        This is the cheapest price!
+        <span role="img" aria-label="Thumbs up">👍</span>
       </BpkTooltip>
     </div>
   ))

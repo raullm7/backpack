@@ -79,6 +79,7 @@ export default function withLazyLoading(Component, document) {
         const opts = Object.defineProperty({}, 'passive', {
           get() {
             supportsPassiveOption = true;
+            return supportsPassiveOption;
           },
         });
         window.addEventListener('test', null, opts);

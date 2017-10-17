@@ -179,7 +179,7 @@ const components = [
   },
 ];
 
-const CalendarPage = () => <DocsPageBuilder
+const CalendarPage = () => (<DocsPageBuilder
   title="Calendar"
   blurb={[
     <Paragraph>
@@ -190,6 +190,6 @@ const CalendarPage = () => <DocsPageBuilder
   components={components}
   readme={calendarReadme}
   sassdocId="calendar"
-/>;
+/>);
 
 export default CalendarPage;

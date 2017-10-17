@@ -19,7 +19,7 @@
 import assign from 'object-assign';
 import PropTypes from 'prop-types';
 import { Component } from 'react';
-import { render, unmountComponentAtNode, findDOMNode } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 
 const KEYCODES = {
   ESCAPE: 27,
@@ -134,7 +134,7 @@ class Portal extends Component {
     if (typeof this.props.target === 'function') {
       return this.props.target();
     }
-    return this.props.target && findDOMNode(this);
+    return this.props.target && this.node;
   }
 
   open() {
@@ -188,6 +188,7 @@ class Portal extends Component {
       const opts = Object.defineProperty({}, 'passive', {
         get() {
           supportsPassiveOption = true;
+          return supportsPassiveOption;
         },
       });
       window.addEventListener('test', null, opts);

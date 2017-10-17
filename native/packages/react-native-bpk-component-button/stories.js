@@ -40,8 +40,7 @@ import ArrowImageSrc from './long-arrow-right-3x.png';
 
 const tokens = Platform.OS === 'ios' ?
   require('bpk-tokens/tokens/ios/base.react.native.common.js') :
-  require('bpk-tokens/tokens/android/base.react.native.common.js')
-;
+  require('bpk-tokens/tokens/android/base.react.native.common.js');
 
 const styles = StyleSheet.create({
   btnContainer: {

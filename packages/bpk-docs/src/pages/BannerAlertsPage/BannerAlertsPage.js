@@ -87,7 +87,7 @@ const components = [
   },
 ];
 
-const BannerAlertsPage = () => <DocsPageBuilder
+const BannerAlertsPage = () => (<DocsPageBuilder
   title="Banner alerts"
   blurb={[
     <Paragraph>
@@ -97,6 +97,6 @@ const BannerAlertsPage = () => <DocsPageBuilder
   components={components}
   sassdocId="notifications"
   readme={bannerAlertReadme}
-/>;
+/>);
 
 export default BannerAlertsPage;

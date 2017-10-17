@@ -24,9 +24,9 @@ import ANDROID_TOKENS from 'bpk-tokens/tokens/android/base.raw.json';
 import DocsPageBuilder from './../../components/DocsPageBuilder';
 import { getPlatformTokens } from './../../helpers/tokens-helper';
 
-const ShadowsPage = () => <DocsPageBuilder
+const ShadowsPage = () => (<DocsPageBuilder
   title="Shadows"
   tokenMap={getPlatformTokens(TOKENS, IOS_TOKENS, ANDROID_TOKENS, ({ category }) => category === 'box-shadows')}
-/>;
+/>);
 
 export default ShadowsPage;

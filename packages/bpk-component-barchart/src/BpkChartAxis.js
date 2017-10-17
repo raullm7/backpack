@@ -31,7 +31,9 @@ const getClassName = cssModules(STYLES);
 const spacing = remToPx(spacingXs);
 const lineHeight = remToPx(lineHeightSm);
 
-const getAxisConfig = ({ orientation, margin, height, width, scale }) => {
+const getAxisConfig = ({
+  orientation, margin, height, width, scale,
+}) => {
   const position = (scale.bandwidth ? center : identity)(scale.copy());
 
   if (orientation === ORIENTATION_X) {
@@ -88,7 +90,9 @@ const BpkChartAxis = (props) => {
     ...rest
   } = props;
 
-  const { textProps, tickPosition, containerProps, labelProps } = getAxisConfig(props);
+  const {
+    textProps, tickPosition, containerProps, labelProps,
+  } = getAxisConfig(props);
 
   const ticks = scale.ticks ?
     scale.ticks(numTicks) :
@@ -113,11 +117,13 @@ const BpkChartAxis = (props) => {
           </text>
         </g>
       ))}
-      { label && <text
-        className={getClassName('bpk-chart__axis-label')}
-        textAnchor="middle"
-        {...labelProps}
-      >{ label }</text> }
+      { label &&
+        <text
+          className={getClassName('bpk-chart__axis-label')}
+          textAnchor="middle"
+          {...labelProps}
+        >{ label }
+        </text> }
     </g>
   );
 };
@@ -139,6 +145,7 @@ BpkChartAxis.propTypes = {
   numTicks: PropTypes.number,
   tickOffset: PropTypes.number,
   tickEvery: PropTypes.number,
+  children: PropTypes.node,
 };
 
 BpkChartAxis.defaultProps = {
