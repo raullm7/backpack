@@ -1,7 +1,12 @@
 # Backpack changelog
 
 ## UNRELEASED
-_Nothing Yet!_
+
+**Breaking:**
+- react-native-bpk-component-button:
+ - The `icon` prop now only accepts strings corresponding to a valid `BpkIcon`. Buttons passing in
+ something other than this will receive a PropTypes warning. For a full list of valid icons, see
+ http://backpack.prod.aws.skyscnr.com/components/web/icons.
 
 ### 2017-10-18 - New neutral configuration for native and web banner alerts
 

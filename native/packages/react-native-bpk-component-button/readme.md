@@ -28,8 +28,6 @@ import * as TOKENS from 'bpk-tokens/tokens/ios/base.react.native.es6';
 
 import { translationHelper } from 'translations';
 
-const ArrowImage = <Image source="require(./long-arrow-right.png)" style={{ height: 14, width: 16 }}/>;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -47,7 +45,7 @@ export default class App extends Component {
         <BpkButton disabled type="destructive" title={translationHelper.translate('BOOK_FLIGHT')} onPress={() => {}} />
         <BpkButton large type="primary" title={translationHelper.translate('BOOK_FLIGHT')} onPress={() => {}} />
 
-        <BpkButton type="featured" title={translationHelper.translate('BOOK_FLIGHT')} icon={ArrowImage} iconOnly onPress={() => {}} />
+        <BpkButton type="featured" title={translationHelper.translate('BOOK_FLIGHT')} icon="baggage" iconOnly onPress={() => {}} />
       </View>
     );
   }
@@ -62,7 +60,7 @@ export default class App extends Component {
 | title                 | string                                                    | true     | -             |
 | accessibilityLabel    | string                                                    | false    | props.title   |
 | disabled              | bool                                                      | false    | false         |
-| icon                  | element                                                   | false    | null          |
+| icon                  | string (must be a valid [BpkIcon](/components/web/icons)) | false    | null          |
 | iconOnly              | bool                                                      | false    | false         |
 | large                 | bool                                                      | false    | false         |
 | theme                 | See [Theme Props](#theme-props) below                     | false    | null          |

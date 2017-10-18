@@ -709,9 +709,40 @@ exports[`iOS BpkButton should support having an icon as well as a title 1`] = `
       >
         Lorem ipsum
       </Text>
-      <Image
-        source="../rightarrow_360.png"
-      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "rgb(82, 76, 97)",
+              "fontFamily": "BpkIcon",
+              "fontSize": 24,
+              "lineHeight": 24,
+            },
+            Object {
+              "fontSize": 16,
+              "lineHeight": 16,
+            },
+            Array [
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgb(255, 255, 255)",
+                },
+                Object {
+                  "marginRight": 4,
+                },
+              ],
+              Object {},
+            ],
+          ]
+        }
+      >
+        
+      </Text>
     </View>
   </View>
 </BVLinearGradient>
@@ -778,7 +809,10 @@ exports[`iOS BpkButton should support having only an icon 1`] = `
               "paddingRight": 12,
               "paddingTop": 8,
             },
-            undefined,
+            Object {
+              "paddingLeft": 0,
+              "paddingRight": 0,
+            },
           ],
           Object {},
         ],
@@ -800,9 +834,38 @@ exports[`iOS BpkButton should support having only an icon 1`] = `
         ]
       }
     >
-      <Image
-        source="../rightarrow_360.png"
-      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "rgb(82, 76, 97)",
+              "fontFamily": "BpkIcon",
+              "fontSize": 24,
+              "lineHeight": 24,
+            },
+            Object {
+              "fontSize": 16,
+              "lineHeight": 16,
+            },
+            Array [
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgb(255, 255, 255)",
+                },
+                undefined,
+              ],
+              Object {},
+            ],
+          ]
+        }
+      >
+        
+      </Text>
     </View>
   </View>
 </BVLinearGradient>
@@ -1174,6 +1237,37 @@ exports[`iOS BpkButton should support the "icon" and "large" property 1`] = `
       >
         Lorem ipsum
       </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "rgb(82, 76, 97)",
+              "fontFamily": "BpkIcon",
+              "fontSize": 24,
+              "lineHeight": 24,
+            },
+            Array [
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgb(255, 255, 255)",
+                },
+                undefined,
+                Object {
+                  "marginRight": 4,
+                },
+              ],
+              Object {},
+            ],
+          ]
+        }
+      >
+        
+      </Text>
     </View>
   </View>
 </BVLinearGradient>
@@ -1248,7 +1342,10 @@ exports[`iOS BpkButton should support the "iconOnly" and "large" property 1`] = 
               "paddingLeft": 16,
               "paddingRight": 16,
             },
-            undefined,
+            Object {
+              "paddingLeft": 0,
+              "paddingRight": 0,
+            },
           ],
           Object {},
         ],
@@ -1270,7 +1367,37 @@ exports[`iOS BpkButton should support the "iconOnly" and "large" property 1`] = 
           undefined,
         ]
       }
-    />
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "rgb(82, 76, 97)",
+              "fontFamily": "BpkIcon",
+              "fontSize": 24,
+              "lineHeight": 24,
+            },
+            Array [
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgb(255, 255, 255)",
+                },
+                undefined,
+                undefined,
+              ],
+              Object {},
+            ],
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
   </View>
 </BVLinearGradient>
 `;

@@ -128,10 +128,18 @@ const modifiers = {
     container: {
       width: tokens.spacingXl,
     },
+    button: {
+      paddingLeft: 0,
+      paddingRight: 0,
+    },
   }),
   iconOnlyLarge: StyleSheet.create({
     container: {
       width: largeHeight,
+    },
+    button: {
+      paddingLeft: 0,
+      paddingRight: 0,
     },
   }),
   textAndIcon: StyleSheet.create({
