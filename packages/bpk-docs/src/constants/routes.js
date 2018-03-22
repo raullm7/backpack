@@ -91,11 +91,18 @@ export const NATIVE_COMPONENTS = '/components/native';
 export const NATIVE_HORIZONTAL_NAV = '/components/native/horizontal-nav';
 export const NATIVE_ICONS = '/components/native/icons';
 export const NATIVE_INPUT = '/components/native/text-input';
+export const NATIVE_NUDGER = '/components/native/nudger';
+export const NATIVE_NAVIGATION_BAR = '/components/native/navigation-bar';
+export const NATIVE_PANELS = '/components/native/panels';
+export const NATIVE_PHONE_INPUT = '/components/native/phone-input';
+export const NATIVE_PICKER = '/components/native/picker';
 export const NATIVE_SPINNER = '/components/native/spinners';
 export const NATIVE_STAR_RATING = '/components/native/star-rating';
 export const NATIVE_SWITCH = '/components/native/switches';
 export const NATIVE_TEXT = '/components/native/text';
 export const NATIVE_TOUCHABLE_OVERLAY = '/components/native/touchable-overlay';
+export const NATIVE_TOUCHABLE_NATIVE_FEEDBACK =
+  '/components/native/touchable-native-feedback';
 
 // components/utilities/
 export const UTILITIES = '/components/utilities';

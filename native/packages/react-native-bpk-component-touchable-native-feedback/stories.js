@@ -20,20 +20,22 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import BpkText from 'react-native-bpk-component-text';
 import { storiesOf, action } from '@storybook/react-native';
+import { borderRadiusSm, spacingMd } from 'bpk-tokens/tokens/base.react.native';
 
+import CenterDecorator from '../../storybook/CenterDecorator';
 import BpkTouchableNativeFeedback from './index';
 
 const styles = StyleSheet.create({
-  text: {
-    backgroundColor: 'white',
-  },
   view: {
-    padding: 10,
+    padding: spacingMd,
+  },
+  wrappingView: {
+    borderRadius: borderRadiusSm,
   },
 });
 
 const textContent = (
-  <BpkText style={styles.text}>
+  <BpkText>
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
     ligula eget dolor. Aenean massa.
   </BpkText>
@@ -43,20 +45,23 @@ const viewContent = <View style={styles.view}>{textContent}</View>;
 
 const onPress = action('Touchable native feedback press');
 
-storiesOf('BpkTouchableNativeFeedback', module)
-  .add('docs:text-content', () => (
-    <BpkTouchableNativeFeedback
-      onPress={onPress}
-      accessibilityLabel="Example touchable overlay"
-    >
-      {textContent}
-    </BpkTouchableNativeFeedback>
-  ))
+storiesOf('react-native-bpk-component-touchable-native-feedback', module)
+  .addDecorator(CenterDecorator)
   .add('docs:view-content', () => (
     <BpkTouchableNativeFeedback
       onPress={onPress}
-      accessibilityLabel="Example touchable overlay"
+      accessibilityLabel="Example touchable native feedback"
     >
       {viewContent}
     </BpkTouchableNativeFeedback>
+  ))
+  .add('docs:view-wrapper', () => (
+    <View style={styles.wrappingView}>
+      <BpkTouchableNativeFeedback
+        onPress={onPress}
+        accessibilityLabel="Example touchable native feedback"
+      >
+        {viewContent}
+      </BpkTouchableNativeFeedback>
+    </View>
   ));

@@ -177,6 +177,7 @@ export const getAndroidBackgroundColour = (
   const style = {
     backgroundColor: 'transparent',
   };
+
   /**
    * The main colour of the button in Android is the start colour from the  gradient
    * for iOS, can be made explicit in the style file if needed

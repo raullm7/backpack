@@ -2,34 +2,121 @@
 
 ## Unreleased
 
+_Nothing yet.._
+
+## 2018-03-22 - Native Picker Component
+
 **Added:**
-- react-native-bpk-component-phone-input:
-  - New `BpkDiallingCodeList` component.
+- react-native-bpk-component-picker: 0.0.1 => 1.0.0
+  - Introducing the React Native picker component.
 
-- react-native-bpk-component-button-link:
-  - New `disabled` prop.
+**Fixed:**
+- react-native-bpk-component-navigation-bar: 1.0.2 => 1.0.3
+  - When providing an image for the title we no longer override the style. Instead, we append to it.
 
-- react-native-bpk-component-button:
+## 2018-03-21 - Native Navigation Bar Improvements
+
+**Fixed:**
+
+- react-native-bpk-component-navigation-bar: 1.0.0 => 1.0.2
+  - `navigationBarStatusBarStyle` is now not supported on iOS.
+  - New chevron style for `BpkNavigationBarBackButtonIOS` that better alings with iOS.
+  - Support user provided `style` prop.
+
+## 2018-03-19 - Native Navigation Bars
+
+**Breaking:**
+- react-native-bpk-component-button: 5.0.0 => 6.0.0
+  - Not actually a breaking change. This was released by mistake again. 5.0.0 and 6.0.0 are compatible.
+
+**Added:**
+- bpk-component-icon: 3.17.1 => 3.18.0
+- bpk-mixins: 17.4.1 => 17.5.0
+- bpk-svgs: 5.13.1 => 5.14.0
+- react-native-bpk-component-icon: 1.4.1 => 1.5.0
+  - New iOS native close icon: `native-ios--close`.
+    - **Note:** to be used on iOS only...
+- react-native-bpk-component-navigation-bar: 0.0.2 => 1.0.0
+  - Introducing the React Native navigation bar component.
+
+## 2018-03-16 - Android buttons style breaking change and React Native horizontal navigation now allows for small text
+
+**Breaking:**
+- react-native-bpk-component-button: 4.4.4 => 5.0.0
+  - Android `secondary` and `destructive` buttons have been visually aligned with iOS by adding a border. Note that the existing visual look is available on both platforms via the [button-link component](https://backpack.github.io/components/native/button-link). This is a breaking change to prevent unintended updates to the button look and feel.
+
+**Added**
+- react-native-bpk-component-horizontal-nav: 2.0.26 => 2.1.0
+  - New `small` prop is accepted in BpkHorizontalNavItem to allow for small text in the navigation item
+
+## 2018-03-15 - New hotels amenities icons and native android back/forward/close icons
+
+**Added:**
+- bpk-component-icon: 3.16.1 => 3.17.0
+- bpk-mixins: 17.3.7 => 17.4.0
+- bpk-svgs: 5.12.3 => 5.13.0
+- react-native-bpk-component-icon: 1.3.6 => 1.4.0
+  - New hotels amenities icons: `hotels--smoking`, `hotels--pets-allowed`, `hotels--jacuzzi` and `hotels--disabled-facilities`.
+  - New Android native back, forward and close icons: `native-android--back`, `native-android--forward` and `native-android--close`.
+    - **Note:** to be used on Android only...
+
+## 2018-03-15 - Native Panel component
+
+**Added:**
+- react-native-bpk-component-panel: 1.0.0
+  - New native panel component, see https://backpack.github.io/components/native/panels.
+
+## 2018-03-13 - Native Phone Number Input
+
+**Added:**
+- react-native-bpk-component-phone-input: 1.0.0
+  - New phone input components, see https://backpack.github.io/components/native/phone-input.
+
+## 2018-03-12 - Native nudger component and SSR OC fixes
+
+**Added:**
+- react-native-bpk-component-nudger: 0.0.1 => 1.0.0
+  - Introducing the React Native nudger component.
+
+**Fixed:**
+- bpk-component-popover: 2.1.1 => 2.1.2
+- bpk-component-tooltip: 3.1.1 => 3.1.2
+- bpk-component-datepicker: 8.0.14 => 8.0.15
+  - Fixed compatibility with server side OC
+- bpk-scrim-utils: 3.1.15 => 3.1.16
+  - Pass `onClose` prop to the wrapped component in `withScrim` HOC
+
+## 2018-03-08 - Android buttons can be icon only and button links can be disabled
+
+**Added:**
+- bpk-component-drawer: 1.1.19 => 1.2.0
+  - Arbitrary props are now passed to drawer container.
+
+- react-native-bpk-component-button: 4.3.9 => 4.4.0
   - Android now supports the `iconOnly` prop.
 
-- bpk-drawer-component:
-  - Spread extra properties to drawer's section.
+- react-native-bpk-component-button-link: 1.0.1 => 1.1.0
+  - New `disabled` prop.
+
+- react-native-bpk-component-touchable-native-feedback: 1.0.0 => 1.1.0
+  - New `borderlessBackground` prop.
+
+**Fixed:**
+- bpk-component-drawer: 1.1.19 => 1.2.0
+- bpk-scrim-utils: 3.1.14 => 3.1.15
+  - Fixed `closeOnScrimClick` behaviour.
 
 ## 2018-03-06 - New `BpkTouchableNativeFeedback` component
 
 **Added:**
-- react-native-bpk-component-touchable-native-feedback: 0.0.0 => 1.0.0
+- react-native-bpk-component-touchable-native-feedback: 1.0.0
   - Introduced new `BpkTouchableNativeFeedback` for safe usage of `TouchableNativeFeedback` pre-Lollipop.
 
 **Fixed:**
 - react-native-bpk-component-banner-alert: 2.1.5 => 2.1.6
-  - Changed every usage of `TouchableNativeFeedback` to `BpkTouchableNativeFeedback`, since it was crashing in Android pre-Lollipop.
 - react-native-bpk-component-button-link: 1.0.0 => 1.0.1
-  - Changed every usage of `TouchableNativeFeedback` to `BpkTouchableNativeFeedback`, since it was crashing in Android pre-Lollipop.
 - react-native-bpk-component-button: 4.3.8 => 4.3.9
-  - Changed every usage of `TouchableNativeFeedback` to `BpkTouchableNativeFeedback`, since it was crashing in Android pre-Lollipop.
 - react-native-bpk-component-card: 1.2.10 => 1.2.11
-  - Changed every usage of `TouchableNativeFeedback` to `BpkTouchableNativeFeedback`, since it was crashing in Android pre-Lollipop.
 - react-native-bpk-component-button-horizontal-nav: 2.0.20 => 2.0.21
   - Changed every usage of `TouchableNativeFeedback` to `BpkTouchableNativeFeedback`, since it was crashing in Android pre-Lollipop.
 
@@ -179,7 +266,7 @@
 
 - bpk-component-link: 1.0.44 => 1.1.0
   - The `alternate` style can now be themed.
-  - The `white` prop has been deprecated in favour of `alternate` in `BpkLink` and `BpkLinkButton`
+  - The `white` prop has been deprecated in favour of `alternate` in `BpkLink` and `BpkButtonLink`
 
 - bpk-component-modal: 1.5.2 => 1.6.0
   - New `fullScreen` prop as an accompanyment to `fullScreenOnMobile`. When true, it trumps the mobile prop.

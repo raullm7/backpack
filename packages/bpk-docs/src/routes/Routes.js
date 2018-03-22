@@ -101,11 +101,17 @@ import NativeCardsPage from './../pages/NativeCardsPage';
 import NativeHorizontalNavPage from './../pages/NativeHorizontalNavPage';
 import NativeIconsPage from './../pages/NativeIconsPage';
 import NativeInputPage from './../pages/NativeTextInputPage';
+import NativeNavigationBarPage from './../pages/NativeNavigationBarPage';
+import NativeNudgerPage from './../pages/NativeNudgerPage';
+import NativePanelsPage from './../pages/NativePanelsPage';
+import NativePhoneInputPage from './../pages/NativePhoneInputPage';
+import NativePickerPage from './../pages/NativePickerPage';
 import NativeSpinnerPage from './../pages/NativeSpinnerPage';
 import NativeStarRatingPage from './../pages/NativeStarRatingPage';
 import NativeSwitchPage from './../pages/NativeSwitchPage';
 import NativeTextPage from './../pages/NativeTextPage';
 import NativeTouchableOverlayPage from './../pages/NativeTouchableOverlayPage';
+import NativeTouchableNativeFeedbackPage from './../pages/NativeTouchableNativeFeedbackPage';
 
 import {
   GridColumnDemoPage,
@@ -213,6 +219,17 @@ const Routes = (
         />
         <Route path={ROUTES.NATIVE_ICONS} component={NativeIconsPage} />
         <Route path={ROUTES.NATIVE_INPUT} component={NativeInputPage} />
+        <Route
+          path={ROUTES.NATIVE_NAVIGATION_BAR}
+          component={NativeNavigationBarPage}
+        />
+        <Route path={ROUTES.NATIVE_NUDGER} component={NativeNudgerPage} />
+        <Route path={ROUTES.NATIVE_PANELS} component={NativePanelsPage} />
+        <Route
+          path={ROUTES.NATIVE_PHONE_INPUT}
+          component={NativePhoneInputPage}
+        />
+        <Route path={ROUTES.NATIVE_PICKER} component={NativePickerPage} />
         <Route path={ROUTES.NATIVE_SPINNER} component={NativeSpinnerPage} />
         <Route
           path={ROUTES.NATIVE_STAR_RATING}
@@ -223,6 +240,10 @@ const Routes = (
         <Route
           path={ROUTES.NATIVE_TOUCHABLE_OVERLAY}
           component={NativeTouchableOverlayPage}
+        />
+        <Route
+          path={ROUTES.NATIVE_TOUCHABLE_NATIVE_FEEDBACK}
+          component={NativeTouchableNativeFeedbackPage}
         />
       </Route>
       <Route path={ROUTES.UTILITIES}>

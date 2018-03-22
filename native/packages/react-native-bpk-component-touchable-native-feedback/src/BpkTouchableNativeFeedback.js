@@ -15,25 +15,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+/* @flow */
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ViewPropTypes, TouchableNativeFeedback, Platform } from 'react-native';
+import {
+  type Element,
+  Platform,
+  TouchableNativeFeedback,
+  ViewPropTypes,
+} from 'react-native';
 
-const BpkTouchableNativeFeedback = props => {
-  const { children, style, ...rest } = props;
+type Props = {
+  children: Element,
+  borderlessBackground: boolean,
+  color: ?string,
+  style: ?(Object | Array<Object>),
+};
+
+const BpkTouchableNativeFeedback = (props: Props) => {
+  const { children, style, borderlessBackground, color, ...rest } = props;
   const preLollipop = Platform.Version < 21;
+  let background = TouchableNativeFeedback.SelectableBackground();
+
+  if (!preLollipop && borderlessBackground) {
+    if (color) {
+      background = TouchableNativeFeedback.Ripple(color, true);
+    } else {
+      background = TouchableNativeFeedback.SelectableBackgroundBorderless();
+    }
+  }
 
   return (
-    <TouchableNativeFeedback
-      style={style}
-      background={
-        preLollipop
-          ? TouchableNativeFeedback.SelectableBackground()
-          : TouchableNativeFeedback.SelectableBackgroundBorderless()
-      }
-      {...rest}
-    >
+    <TouchableNativeFeedback style={style} background={background} {...rest}>
       {React.Children.only(children)}
     </TouchableNativeFeedback>
   );
@@ -41,10 +55,14 @@ const BpkTouchableNativeFeedback = props => {
 
 BpkTouchableNativeFeedback.propTypes = {
   children: PropTypes.element.isRequired,
+  borderlessBackground: PropTypes.bool,
+  color: PropTypes.string,
   style: ViewPropTypes.style,
 };
 
 BpkTouchableNativeFeedback.defaultProps = {
+  borderlessBackground: true,
+  color: null,
   style: null,
 };
 

@@ -16,13 +16,14 @@
  * limitations under the License.
  */
 
-import { View, Platform, StyleSheet, ViewPropTypes } from 'react-native';
+import { Platform, StyleSheet, View, ViewPropTypes } from 'react-native';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
   colorGray300,
   colorGray700,
   colorBlue700,
+  spacingSm,
   spacingMd,
   spacingBase,
 } from 'bpk-tokens/tokens/base.react.native';
@@ -45,6 +46,9 @@ const styles = StyleSheet.create({
   selectedText: {
     color: colorBlue700,
   },
+  smallText: {
+    paddingVertical: spacingSm,
+  },
 });
 
 const BpkHorizontalNavItem = props => {
@@ -54,11 +58,13 @@ const BpkHorizontalNavItem = props => {
     selected,
     style,
     theme,
+    small,
     title,
     ...rest
   } = props;
 
   const accessibilityTraits = ['button'];
+  const textSize = small ? 'sm' : 'base';
   const textStyles = [styles.text];
 
   if (disabled) {
@@ -75,23 +81,29 @@ const BpkHorizontalNavItem = props => {
       textStyles.push(themeStyles.selectedText);
     }
   }
+  if (small) {
+    textStyles.push(styles.smallText);
+  }
 
   const isAndroid = Platform.OS === 'android';
   const Touchable = isAndroid
     ? BpkTouchableNativeFeedback
     : BpkTouchableOverlay;
   const formattedTitle = isAndroid ? title.toUpperCase() : title;
-
+  const platformProps = isAndroid ? { borderlessBackground: false } : {};
   return (
     <Touchable
       accessibilityComponentType="button"
       accessibilityLabel={accessibilityLabel || title}
       accessibilityTraits={accessibilityTraits}
       disabled={disabled || selected}
+      {...platformProps}
       {...rest}
     >
       <View style={style}>
-        <BpkText style={textStyles}>{formattedTitle}</BpkText>
+        <BpkText style={textStyles} textStyle={textSize}>
+          {formattedTitle}
+        </BpkText>
       </View>
     </Touchable>
   );
@@ -105,6 +117,7 @@ const propTypes = {
   disabled: PropTypes.bool,
   selected: PropTypes.bool,
   style: ViewPropTypes.style,
+  small: PropTypes.bool,
   theme: themePropType,
 };
 
@@ -114,6 +127,7 @@ BpkHorizontalNavItem.defaultProps = {
   accessibilityLabel: null,
   disabled: false,
   selected: false,
+  small: false,
   style: null,
   theme: null,
 };

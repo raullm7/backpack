@@ -133,6 +133,27 @@ const links = [
         children: 'Text input',
       },
       {
+        id: 'NATIVE_NAVIGATION_BAR',
+        route: routes.NATIVE_NAVIGATION_BAR,
+        children: 'Navigation Bar',
+      },
+      { id: 'NATIVE_NUDGER', route: routes.NATIVE_NUDGER, children: 'Nudger' },
+      {
+        id: 'NATIVE_PANELS',
+        route: routes.NATIVE_PANELS,
+        children: 'Panels',
+      },
+      {
+        id: 'NATIVE_PHONE_INPUT',
+        route: routes.NATIVE_PHONE_INPUT,
+        children: 'Phone number input',
+      },
+      {
+        id: 'NATIVE_PICKER',
+        route: routes.NATIVE_PICKER,
+        children: 'Pickers',
+      },
+      {
         id: 'NATIVE_SPINNER',
         route: routes.NATIVE_SPINNER,
         children: 'Spinners',
@@ -153,8 +174,11 @@ const links = [
         route: routes.NATIVE_TOUCHABLE_OVERLAY,
         children: 'Touchable Overlay',
       },
-      { id: 'NATIVE_BUTTON_LINK', route: null, children: 'Button Link' },
-      { id: 'NATIVE_NUDGER', route: null, children: 'Nudger' },
+      {
+        id: 'NATIVE_TOUCHABLE_NATIVE_FEEDBACK',
+        route: routes.NATIVE_TOUCHABLE_NATIVE_FEEDBACK,
+        children: 'Touchable Native Feedback',
+      },
     ],
   },
   {

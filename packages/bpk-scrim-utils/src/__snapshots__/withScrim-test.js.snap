@@ -2,7 +2,7 @@
 
 exports[`BpkScrim render should render correctly 1`] = `
 <div
-  className="bpk-scrim-content "
+  className="bpk-scrim-content"
 >
   <div
     className="bpk-scrim"
@@ -10,7 +10,6 @@ exports[`BpkScrim render should render correctly 1`] = `
     onTouchStart={[Function]}
   />
   <TestComponent
-    closeOnScrimClick={true}
     dialogRef={[Function]}
     isIphone={false}
     onClose={[Function]}
@@ -20,7 +19,7 @@ exports[`BpkScrim render should render correctly 1`] = `
 
 exports[`BpkScrim render should render correctly when is iPhone 1`] = `
 <div
-  className="bpk-scrim-content bpk-scrim-content--iphone-fix "
+  className="bpk-scrim-content bpk-scrim-content--iphone-fix"
 >
   <div
     className="bpk-scrim"
@@ -28,9 +27,25 @@ exports[`BpkScrim render should render correctly when is iPhone 1`] = `
     onTouchStart={[Function]}
   />
   <TestComponent
-    closeOnScrimClick={true}
     dialogRef={[Function]}
     isIphone={true}
+    onClose={[Function]}
+  />
+</div>
+`;
+
+exports[`BpkScrim render should render correctly with closeOnScrimClick as false 1`] = `
+<div
+  className="bpk-scrim-content"
+>
+  <div
+    className="bpk-scrim"
+    onMouseDown={null}
+    onTouchStart={null}
+  />
+  <TestComponent
+    dialogRef={[Function]}
+    isIphone={false}
     onClose={[Function]}
   />
 </div>
@@ -46,7 +61,6 @@ exports[`BpkScrim render should render correctly with containerClassName 1`] = `
     onTouchStart={[Function]}
   />
   <TestComponent
-    closeOnScrimClick={true}
     dialogRef={[Function]}
     isIphone={false}
     onClose={[Function]}

@@ -13,7 +13,7 @@ exports[`Android BpkHorizontalNavItem should render correctly 1`] = `
   hitSlop={undefined}
   nativeBackgroundAndroid={
     Object {
-      "attribute": "selectableItemBackgroundBorderless",
+      "attribute": "selectableItemBackground",
       "type": "ThemeAttrAndroid",
     }
   }
@@ -67,7 +67,7 @@ exports[`Android BpkHorizontalNavItem should render correctly with "selected" pr
   hitSlop={undefined}
   nativeBackgroundAndroid={
     Object {
-      "attribute": "selectableItemBackgroundBorderless",
+      "attribute": "selectableItemBackground",
       "type": "ThemeAttrAndroid",
     }
   }
@@ -111,6 +111,63 @@ exports[`Android BpkHorizontalNavItem should render correctly with "selected" pr
 </View>
 `;
 
+exports[`Android BpkHorizontalNavItem should render correctly with "small" prop 1`] = `
+<View
+  accessibilityComponentType="button"
+  accessibilityLabel="Nav"
+  accessibilityTraits={
+    Array [
+      "button",
+    ]
+  }
+  accessible={true}
+  hitSlop={undefined}
+  nativeBackgroundAndroid={
+    Object {
+      "attribute": "selectableItemBackground",
+      "type": "ThemeAttrAndroid",
+    }
+  }
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={null}
+  testID={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgb(82, 76, 97)",
+          "fontFamily": "sans-serif",
+          "fontSize": 14,
+          "fontWeight": "400",
+        },
+        Array [
+          Object {
+            "color": "rgb(82, 76, 97)",
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
+          },
+          Object {
+            "paddingVertical": 4,
+          },
+        ],
+      ]
+    }
+  >
+    NAV
+  </Text>
+</View>
+`;
+
 exports[`Android BpkHorizontalNavItem should render correctly with "spaceAround" prop 1`] = `
 <View
   accessibilityComponentType="button"
@@ -124,7 +181,7 @@ exports[`Android BpkHorizontalNavItem should render correctly with "spaceAround"
   hitSlop={undefined}
   nativeBackgroundAndroid={
     Object {
-      "attribute": "selectableItemBackgroundBorderless",
+      "attribute": "selectableItemBackground",
       "type": "ThemeAttrAndroid",
     }
   }
@@ -178,7 +235,7 @@ exports[`Android BpkHorizontalNavItem should render correctly with arbitrary pro
   hitSlop={undefined}
   nativeBackgroundAndroid={
     Object {
-      "attribute": "selectableItemBackgroundBorderless",
+      "attribute": "selectableItemBackground",
       "type": "ThemeAttrAndroid",
     }
   }
@@ -232,7 +289,7 @@ exports[`Android BpkHorizontalNavItem should render correctly with custom "style
   hitSlop={undefined}
   nativeBackgroundAndroid={
     Object {
-      "attribute": "selectableItemBackgroundBorderless",
+      "attribute": "selectableItemBackground",
       "type": "ThemeAttrAndroid",
     }
   }
@@ -290,7 +347,7 @@ exports[`Android BpkHorizontalNavItem should support theming 1`] = `
   hitSlop={undefined}
   nativeBackgroundAndroid={
     Object {
-      "attribute": "selectableItemBackgroundBorderless",
+      "attribute": "selectableItemBackground",
       "type": "ThemeAttrAndroid",
     }
   }
